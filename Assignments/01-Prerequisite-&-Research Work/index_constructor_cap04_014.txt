@@ -1,0 +1,17 @@
+>>> What is a Constructor Function?
+    => Constructor is used to create new function object using Constructor function().
+    => It is use " new " keyword to create function.
+    => Example :
+           let foo = new function( args1, args2, function body)
+
+           let sum = new function(a , b , "return a + b;")
+
+    => we can create funcrion object Instance :
+     
+       function Person(name , age){
+        this.name = name;
+        this.age = age;
+       }
+
+       let person1 = new Person("Ravi",32);
+       let person2 = new Person("Lata",23);

@@ -1,0 +1,15 @@
+>>> What is Closure ?
+    => Closure is bundle of functions.
+    => There is one outer function and second inner function.
+    => It is a feature that allow inner function to access outer function scope.
+    => Lexical Scoping:
+       A function scope’s ability to access variables from the parent scope is known as lexical scope.
+       
+    => Example : 
+                function outer(){
+                    let name = "Ravi"; // name is local variable scoped under outer function
+    
+                    function inner(){  // this is inner function that form closure 
+                        return name;   // use name that is declared by outer function
+                    }
+                }
