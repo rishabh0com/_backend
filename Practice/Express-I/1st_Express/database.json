@@ -1,0 +1,13 @@
+{
+  "person": [
+    { "id": 1, "name": "rahul", "age": "90" },
+    { "id": 2, "name": "kali", "age": 15 },
+    { "name": "mali", "age": 15 },
+    { "name": "mali", "age": 15 },
+    { "name": "mali", "age": 15 }
+  ],
+  "teacher": [
+    { "id": 1, "name": "mosin sir", "age": "10" },
+    { "name": "mali", "age": 15 }
+  ]
+}
