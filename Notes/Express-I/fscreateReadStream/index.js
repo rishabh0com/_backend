@@ -17,3 +17,6 @@ const server = http.createServer((req,res)=>{
 })
 
 server.listen(8080,()=>{console.log("server is running")})
+
+// let date = new Date().toTimeString()
+// console.log(date)

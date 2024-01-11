@@ -6,7 +6,7 @@
 
            let sum = new function(a , b , "return a + b;")
 
-    => we can create funcrion object Instance :
+    => we can create funcrion object Instance** :
      
        function Person(name , age){
         this.name = name;
