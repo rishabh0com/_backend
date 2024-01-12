@@ -1,23 +1,18 @@
-import express from "express"
-// import mongoose from "mongoose"
-import { connection, userModel } from "./dataBase.js";
-
+const express = require("express")
+const cors = require("cors")
+const { connection } = require("./dataBase.js")
+const { userRouter } = require("./routes/userRouter.js")
 const app = express();
 const PORT = 6060;
+
 // express json -> obj middleware
 app.use(express.json());
+app.use(cors()) // cors beacuse of different origin
+app.use("/", userRouter)
 
 // get request :-
 app.get("/", (req, res) => {
     res.status(200).send("Welcome to Home Page ~")
-})
-// post request for add new user :-
-app.post("/add-user", async (req, res) => { // make cb function async
-    console.log(req.body)
-    const dataObj = req.body; // 1. take data body from frontend
-    const user = new userModel(dataObj) // 2. construct using userModel
-    await user.save() // 3. save document 
-    res.status(201).send("new user has been added");
 })
 
 app.listen(PORT, async () => {
