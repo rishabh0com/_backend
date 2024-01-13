@@ -1,6 +1,6 @@
 const express = require("express");
 const { BookModel } = require("../database");
-const { bookDataValidator } = require("./Middleware/validator");
+const { bookDataValidator } = require("../Middleware/validator");
 
 const bookRouter = express.Router();
 
