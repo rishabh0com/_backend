@@ -11,7 +11,7 @@ const auth = async (req, res, next) => {
       return res
         .status(401)
         .send({
-          message: "Refresh token is revoked",
+          message: "Refresh token is revoked , Please Login Again~",
           revokedAt: isTokenRevoked.createdAt,
         });
     }
