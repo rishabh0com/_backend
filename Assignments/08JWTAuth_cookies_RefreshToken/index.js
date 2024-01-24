@@ -1,4 +1,5 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const { connection } = require("./db");
 const { authRoutes } = require("./routes/authRoutes");
 const { blogRouter } = require("./routes/blogRoutes");
@@ -6,6 +7,7 @@ const { blogRouter } = require("./routes/blogRoutes");
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 app.use("/users", authRoutes);
 app.use("/blogs", blogRouter);
 

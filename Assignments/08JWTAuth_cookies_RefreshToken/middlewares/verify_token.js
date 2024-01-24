@@ -29,9 +29,10 @@ const auth = async (req, res, next) => {
             (err, decoded) => {
               if (!err) {
                 let new_access_token = jwt.sign({}, process.env.access_secret, {
-                  expiresIn: 40,
+                  expiresIn: "1h",
                 });
-                res.send({ new_access_token });
+                res.cookie("blog-access-token:", new_access_token)
+                res.send({ msg: "new access token has been generated : cookie"});
               } else {
                 res.send("login again..");
               }

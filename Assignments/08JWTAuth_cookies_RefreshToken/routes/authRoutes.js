@@ -50,9 +50,10 @@ authRoutes.post("/login", async (req, res) => {
             process.env.refresh_secret,
             { expiresIn: "7d" }
           );
+          res.cookie("blog-access-token:", token)
           res
             .status(200)
-            .send({ msg: "login successful", token, refresh_token });
+            .send({ msg: "login successful", refresh_token });
         } else {
           res.send({ error: err });
         }
