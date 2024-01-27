@@ -29,8 +29,12 @@ authRoutes.post("/register", async (req, res) => {
         // console.log(err);
         res.send({ error: err });
       } else {
-        const newUser = new UserModel({ username, password: hash });
-        await newUser.save();
+        const newUser = await new UserModel({username,password:hash}).save()
+
+        /** 
+         * we also save user from -> await Model.create({a,b})
+         * const newUser = await UserModel.create({ username, password: hash });
+         * */ 
         // Store hash in your password DB.
         if (newUser) {
           res.status(201).send({ msg: "user is created ~" });
