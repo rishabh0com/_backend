@@ -1,13 +1,16 @@
-# Instructions
+##  Instructions
+### Problem statement:
 
-- Implement the JWT authentication on the blogging application you have created,
-  if not created please create a new one.  
+- Create an Express app with user registration, login and logout functionality.
 
-- Make sure protected routes are not accessible without token
-  
-- Implement refresh token as well. take help from internet,
-   eg: `https://codeforgeek.com/refresh-token-jwt-nodejs-authentication`
+- Implement JSON Web Tokens (JWT) for user authentication.
 
-- keep expiry of jwt as 1h and refresh token as 7days
- 
-- Try storing/passing the token using cookies. Hint : refer cookie-parser library
+- Implement JWT blacklisting to prevent the use of revoked tokens.
+
+- Implement refresh tokens to improve the user experience by allowing them to stay logged in even after their access token expires.
+
+- Use MongoDB to store user data and JWT blacklisted tokens.
+
+- Use bcrypt to hash user passwords before storing them in the database.
+
+- Use dotenv to manage environment variables.
