@@ -8,12 +8,10 @@ const auth = async (req, res, next) => {
     let refresh_token = req.query.refreshToken;
     const isTokenRevoked = await RevokedToken.findOne({ token: refresh_token });
     if (isTokenRevoked) {
-      return res
-        .status(401)
-        .send({
-          message: "Refresh token is revoked , Please Login Again~",
-          revokedAt: isTokenRevoked.createdAt,
-        });
+      return res.status(401).send({
+        message: "Refresh token is revoked , Please Login Again~",
+        revokedAt: isTokenRevoked.createdAt,
+      });
     }
     console.log(access_token);
     jwt.verify(
