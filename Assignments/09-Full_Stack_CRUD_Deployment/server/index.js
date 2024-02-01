@@ -1,6 +1,7 @@
 const express = require("express");
 const connection = require("./config/db");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const { userRoutes } = require("./routes/user.routes");
 const { noteRoutes } = require("./routes/note.routes");
@@ -17,6 +18,7 @@ app.get("/", async (req, res) => {
 });
 
 // middleware
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
