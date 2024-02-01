@@ -6,7 +6,7 @@ const noteSchema = mongooes.Schema(
     title: { type: String, required: true },
     discription: { type: String, required: true },
     time: { type: String, default: moment().format("LT") },
-    date: { type: Date, default: moment().format("L") },
+    date: { type: String, default: moment().format("DD/MM/YY") },
     userID: { type: String, required: true },
   },
   { versionKey: false }
