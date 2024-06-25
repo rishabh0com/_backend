@@ -1,6 +1,7 @@
 # Backend Repository
-
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zartek.in%2Fbest-backend-technologies-for-mobile-apps%2F&psig=AOvVaw1dQ4bFtPaxLVYkvAk09JKH&ust=1719387017823000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJC31POd9oYDFQAAAAAdAAAAABAZ">
+<div>
+   <img src="https://images.ctfassets.net/xri6xnn81z4a/EoOvRyIMaGbMjPcrqIgwb/70524abc0a6a50732e8a28a57864efb0/Backend-Development.jpg">
+</div>
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -56,7 +57,7 @@ To set up this repository locally, follow these steps:
 
 ## Project Structure
 <pre>
-  backend/
+  _backend/
 ├── Assignments/
 │   ├── Prerequisite-&-Research Work/
 │   ├── Mongo_CRUD/
