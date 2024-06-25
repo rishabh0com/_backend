@@ -1,6 +1,6 @@
 # Backend Repository
 
-![Backend Development](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zartek.in%2Fbest-backend-technologies-for-mobile-apps%2F&psig=AOvVaw1dQ4bFtPaxLVYkvAk09JKH&ust=1719387017823000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJC31POd9oYDFQAAAAAdAAAAABAZ)
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zartek.in%2Fbest-backend-technologies-for-mobile-apps%2F&psig=AOvVaw1dQ4bFtPaxLVYkvAk09JKH&ust=1719387017823000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJC31POd9oYDFQAAAAAdAAAAABAZ">
 
 ## Table of Contents
 - [Introduction](#introduction)
