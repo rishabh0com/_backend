@@ -18,8 +18,8 @@ app.get("/", async (req, res) => {
 });
 
 // middleware
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 app.use(cookieParser());
 
 // Routes

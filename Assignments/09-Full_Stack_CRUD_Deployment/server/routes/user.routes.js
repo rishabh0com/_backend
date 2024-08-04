@@ -19,22 +19,23 @@ userRoutes.get("/refreshToken", (req, res) => {
 
 userRoutes.post("/register", async (req, res) => {
   const { firstName, lastName, email, password, DOB } = req.body;
-  //   console.log(req.body)
+  console.log(req.body, req.headers);
   try {
     // hash the password
     const hashPass = bcrypt.hashSync(password, 9);
     if (!DOB) throw new Error("DOB is required");
     const formattedDate = moment(DOB).format("DD-MM-YYYY"); // used moment packeg to format date
     // console.log(formattedDate);
-    await UserModel.create({
+    const user = await UserModel.create({
       firstName,
       lastName,
       email,
       password: hashPass,
       DOB: formattedDate,
     });
-    res.send({ msg: "user is created" });
+    res.send({ msg: "user is created", user      });
   } catch (error) {
+    console.log(error);
     res.send({ msg: error.message, error });
   }
 });
@@ -70,7 +71,7 @@ userRoutes.post("/login", async (req, res) => {
 // get request for logout :
 
 userRoutes.get("/logout", async (req, res) => {
-  const token = req.cookies.refreshToken
+  const token = req.cookies.refreshToken;
   try {
     if (!token) throw new Error("token is required");
 
